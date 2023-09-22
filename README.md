@@ -41,9 +41,9 @@ The screen I used (mostly based on price) was direct connect 7" touchscreen, I d
 I do not recall where I found it but you do have to go into raspi config.
 
 I used PuTTY to ssh to the raspberry
-
+```
 sudo raspi-config
-
+```
 Option 1 System Options
 
 Option S5 Boot / Auto Login
@@ -77,16 +77,16 @@ Go into your machine settings in Cura
 I tried a couple of different macros and ended up using https://gist.github.com/besser/30140a30312d5c7adceabf8a493472c3 which is below
 
 For your Start Gcode delete everything and add:
-
+```
 SET_GCODE_VARIABLE MACRO=START_PRINT VARIABLE=bed_temp VALUE={material_bed_temperature_layer_0}
 SET_GCODE_VARIABLE MACRO=START_PRINT VARIABLE=extruder_temp VALUE={material_print_temperature_layer_0}
 START_PRINT
-
+```
 For your End Gcode delete everything and add:
-
+```
 SET_GCODE_VARIABLE MACRO=END_PRINT VARIABLE=machine_depth VALUE={machine_depth}
 END_PRINT
-
+```
 ****BEFORE YOU DO ANY MOVEMENT ON THE PRINTER****
 
 I added comments in printer.cfg for lines to verify/adjust for your printer
