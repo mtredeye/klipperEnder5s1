@@ -74,6 +74,8 @@ In my printer.cfg there is the Start and Stop Macros that do just that and all y
 
 Go into your machine settings in Cura
 
+I tried a couple of different macros and ended up using https://gist.github.com/besser/30140a30312d5c7adceabf8a493472c3 which is below
+
 For your Start Gcode delete everything and add:
 
 SET_GCODE_VARIABLE MACRO=START_PRINT VARIABLE=bed_temp VALUE={material_bed_temperature_layer_0}
