@@ -87,6 +87,10 @@ END_PRINT
 
 ****BEFORE YOU DO ANY MOVEMENT ON THE PRINTER****
 
+I added comments in printer.cfg for lines to verify/adjust for your printer
+
+I commented out [skew_correction] and the commands in the start, end, and cancel macros, dont enable until you do the calibration, I also commented out most of [Set_material], this changes all of your calibrations based on the material type set in the slicer...I have not got that far and only have printed on one material type.
+
 You will want to set your bltouch x-offset and y-offset in the printer.cfg under [bltouch] mine were very different from the ones in the original printer.cfg
 
 I aslo changed the samples from 1 to 2 after reading about errors when doing just 1 probe
@@ -111,7 +115,7 @@ For that I found https://www.reddit.com/r/klippers/comments/z4pwcr/klipper_calib
 
 Good video on youtube but the spreadsheet is the major help with links to the klipper documentation and how to's I learned a lot reading though that so until you go through this you will want to leave the items I have commented out in the printer.cfg and enable them as you go.
 
-There were spome settings I changed from the original like shaper_type under [input_shaper] to mzv, as you will read the original was not compatable with using this macro...you will learn about that when go through the calibration
+There were some settings I changed from the original like shaper_type under [input_shaper] to mzv, as you will read the original was not compatable with using this macro...you will learn about that when go through the calibration
 
 The one thing not covered in his guide is skew correction...highly recommend if you want dimensionally accurate prints. I followed this document for that https://www.klipper3d.org/Skew_Correction.html
 
